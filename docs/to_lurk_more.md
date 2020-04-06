@@ -7,3 +7,6 @@
 
 #### Post/Redirect/Get
 [wiki_link](https://ru.wikipedia.org/wiki/Post/Redirect/Get)
+
+#### Code smell
+[link](https://blog.codinghorror.com/code-smells/)
