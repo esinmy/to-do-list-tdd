@@ -20,11 +20,14 @@ source virtualenv/Scripts/activate
 #### Running the Django dev server
 `python manage.py runserver`
 
+#### Running all tests
+`python manage.py test`
+
 #### Running the functional tests
-`python functional_tests.py`
+`python manage.py test functional_tests`
 
 #### Running the unit tests
-`python manage.py test`
+`python manage.py test lists`
 
 ## Git
 
