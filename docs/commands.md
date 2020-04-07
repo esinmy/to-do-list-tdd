@@ -33,3 +33,6 @@ source virtualenv/Scripts/activate
 
 #### Show last commits info
 `git log --oneline`
+
+#### Move the file
+`git mv tests.py tests/tests.py`
