@@ -10,3 +10,11 @@
 
 #### Code smell
 [link](https://blog.codinghorror.com/code-smells/)
+
+#### YAGNI
+[wiki_link](https://ru.wikipedia.org/wiki/YAGNI)
+
+#### Big Design Up Front
+[wiki_link](https://en.wikipedia.org/wiki/Big_Design_Up_Front)
+
+#### REST
