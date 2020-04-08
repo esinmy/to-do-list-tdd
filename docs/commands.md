@@ -4,6 +4,9 @@
 #### Add excluded files/folders in .gitignore using terminal
 `echo "__pycache__" >> .gitignore`
 
+#### re search in file
+`grep -E "class|def" tests.py`
+
 #### Activate venv using UNIX hints
 ```
 source virtualenv/Scripts/activate
