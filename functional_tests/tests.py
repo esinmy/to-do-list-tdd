@@ -27,7 +27,7 @@ class NewVisitorTest(LiveServerTestCase):
                     raise e
                 time.sleep(0.5)
 
-    def test_can_start_a_list_for_one_user(self):
+    def _test_can_start_a_list_for_one_user(self):
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
         self.browser.get(self.live_server_url)
@@ -65,7 +65,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied, she goes back to sleep
 
-    def test_multiple_users_can_start_lists_at_different_urls(self):
+    def _test_multiple_users_can_start_lists_at_different_urls(self):
         # Edith starts a new to-do list
         self.browser.get(self.live_server_url)
         inputbox = self.browser.find_element_by_id("id_new_item")
@@ -109,3 +109,27 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn("Buy milk", page_text)
 
         # Satisfied, they both go back to sleep
+
+    def test_layout_and_styling(self):
+        # Edith goes to the home page
+        self.browser.get(self.live_server_url)
+        self.browser.set_window_size(1024, 768)
+        time.sleep(5)
+        # she notices the input box is nicely center
+        inputbox = self.browser.find_element_by_id("id_new_item")
+        self.assertAlmostEqual(
+            inputbox.location["x"] + inputbox.size["width"] / 2,
+            1024/2,
+            delta = 10,
+        )
+
+        # She starts a new list and sees the input is nicely
+        # centered there too
+        inputbox.send_keys('testing')
+        inputbox.send_keys(Keys.ENTER)
+        self.wait_for_row_in_list_table('1: testing')
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        self.assertAlmostEqual(
+        inputbox.location['x'] + inputbox.size['width'] / 2,
+        1024/2,
+        delta = 10)
