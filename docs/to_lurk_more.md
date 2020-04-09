@@ -18,3 +18,6 @@
 [wiki_link](https://en.wikipedia.org/wiki/Big_Design_Up_Front)
 
 #### REST
+
+#### Customize Bootstrap
+[link](http://coding.smashingmagazine.com/2013/03/12/customizing-bootstrap/)
