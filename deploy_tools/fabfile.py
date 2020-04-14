@@ -3,6 +3,15 @@ from fabric.contrib.files import append, exists
 from fabric.api import cd, env, local, run
 
 REPO_URL = 'https://github.com/esinmy/to-do-list-tdd'
+env.hosts = ['ec2-18-222-232-158.us-east-2.compute.amazonaws.com']
+env.user = 'ubuntu'
+env.key_filename = r'D:\!MY_DOC\aws_key_pair.pem'
+
+def local_uname():
+    local('uname -a')
+
+def remote_uname():
+    run('uname -a')
 
 def deploy():
     site_folder = f'/home/{env.user}/sites/{env.host}'
@@ -39,6 +48,6 @@ def _update_static_files():
     run("./venv/bin/python3 manage.py collectstatic --noinput")
 
 def _update_database():
-    run("./venv/bin/bin/python3 manage.py migrate --noinput")
+    run("./venv/bin/python3 manage.py migrate --noinput")
 
 
