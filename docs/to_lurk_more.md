@@ -19,5 +19,9 @@
 
 #### REST
 
+#### Technical debt
+[link](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)
+
+
 #### Customize Bootstrap
 [link](http://coding.smashingmagazine.com/2013/03/12/customizing-bootstrap/)
